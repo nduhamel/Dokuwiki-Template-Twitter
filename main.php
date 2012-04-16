@@ -16,12 +16,6 @@ require_once 'template.php';
 
         <?php tpl_metaheaders() ?>
         <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
-        <style type="text/css">
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
     </head>
 
     <body>
@@ -33,20 +27,20 @@ require_once 'template.php';
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="#">Project name</a>
+                    <a class="brand" href="<?php echo wl() ?>">[<?php echo strip_tags($conf['title']) ?>]</a>
                     <div class="nav-collapse">
                         <ul class="nav">
                             <?php amdy_tpl_link_as_li(wl($ID, 'do=backlink'), tpl_pagetitle($ID, true), 'title="' . $lang['btn_backlink'] . '"') ?>
                             <?php amdy_tpl_link_as_li(wl(), $conf['title'], 'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]"') ?>
+                            <li><?php amdy_tpl_searchform() ?></li>
                         </ul>
-                        <p class="navbar-text pull-right"><?php amdy_tpl_searchform() ?></p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container-fluid">
             <div class="row-fluid">
-                <div class="span2">
+                <!--div class="span2">
                     <div class="well sidebar-nav">
                         <ul class="nav nav-list">
                             <li class="nav-header">Page</li>
@@ -54,13 +48,13 @@ require_once 'template.php';
                             <li><a href="">Href 2</a></li>
                         </ul>
                     </div>
-                </div>
+                </div-->
                 <div class="span10">
                     <div class="row-fluid">
-                        <div class="span1">
+                        <div class="span1 small-form">
                             <?php tpl_button('edit') ?>
                         </div>
-                        <div class="span6">
+                        <div class="span6 small-form">
                             <?php tpl_button('recent') ?>
                         </div>
                     </div>
@@ -95,9 +89,6 @@ require_once 'template.php';
                     </div>
 
                     <div class="row-fluid">
-                        <div class="span5">
-                            <span class="badge badge-info"><?php tpl_userinfo() ?></span>
-                        </div>
                         <div class="span5">
                             <span class="badge badge-info"><?php tpl_pageinfo() ?></span>
                         </div>

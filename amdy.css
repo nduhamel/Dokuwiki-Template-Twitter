@@ -1,0 +1,16 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#dw__search #qsearch__in {
+    margin-right: 10px;
+}
+ul.nav li form {
+    padding-top: 7px;
+    padding-right: 10px;
+    margin-bottom: 0px !important;
+}
+.small-form form {
+    padding-right: 0px;
+    margin-bottom: 0px !important;
+}
