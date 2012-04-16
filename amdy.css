@@ -14,3 +14,7 @@ ul.nav li form {
     padding-right: 0px;
     margin-bottom: 0px !important;
 }
+a.wikilink2 {
+    color: red;
+    text-decoration: underline !important;
+}
